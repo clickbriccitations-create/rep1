@@ -17,8 +17,8 @@ export default function FounderSection() {
 
         <SectionHeading
           badge="Leadership"
-          title="Meet Our"
-          highlight="Founder"
+          title="Meet Our Founder"
+          
           description="A vision driven by enterprise innovation, Oracle expertise and long-term partnerships."
         />
 

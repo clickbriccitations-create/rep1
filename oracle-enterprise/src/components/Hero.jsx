@@ -12,7 +12,7 @@ export default function Hero() {
 
             <AuroraBackground />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-8 pt-52 pb-32">
+            <div className="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-32">
 
                 <div className="grid lg:grid-cols-2 items-center gap-20">
 

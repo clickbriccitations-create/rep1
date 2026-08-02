@@ -25,13 +25,11 @@ Trusted Oracle Cloud Partner
 
 Accelerating
 
-<span className="block bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-transparent bg-clip-text">
 
 Enterprise Growth
 
-</span>
 
-with Oracle Cloud & AI
+
 
 </h1>
 
@@ -53,16 +51,11 @@ Helping enterprises modernize legacy systems, migrate to Oracle Cloud Infrastruc
 
 </div>
 
-<div className="mt-10">
 
-<AICommandBox/>
-
-</div>
 
 <div className="flex gap-5 mt-8">
 
-<button className="rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4">
-
+<button className="rounded-full border border-indigo-200 px-8 py-4">
 Schedule Consultation
 
 </button>

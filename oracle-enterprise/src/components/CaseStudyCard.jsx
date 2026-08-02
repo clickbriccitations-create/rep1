@@ -239,7 +239,7 @@ from-blue-600
 to-indigo-600
 px-6
 py-3
-text-white
+text-black
 font-semibold
 shadow-lg
 hover:gap-4

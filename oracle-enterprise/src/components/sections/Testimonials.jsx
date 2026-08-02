@@ -43,46 +43,6 @@ export default function Testimonials() {
 
         {/* Metrics */}
 
-        <motion.div
-          initial={{
-            opacity:0,
-            y:40
-          }}
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
-          viewport={{
-            once:true
-          }}
-          transition={{
-            duration:.6
-          }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-24"
-        >
-
-          {trustMetrics.map((metric)=>(
-            <div
-              key={metric.label}
-              className="rounded-[30px] bg-white border border-slate-200 p-10 shadow-[0_15px_50px_rgba(15,23,42,.06)] text-center"
-            >
-
-              <AnimatedCounter
-                value={metric.value}
-                suffix={metric.suffix}
-                className="block text-6xl font-black text-blue-600"
-              />
-
-              <p className="mt-4 text-slate-500 font-medium">
-
-                {metric.label}
-
-              </p>
-
-            </div>
-          ))}
-
-        </motion.div>
 
         {/* Marquee Heading */}
 

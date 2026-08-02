@@ -8,12 +8,11 @@ import {
 
 
 const navItems = [
-  "Solutions",
+  
   "Services",
   "Industries",
-  "Oracle Expertise",
-  "Insights",
-  "Company"
+  "Casestudies",
+  "About Us"
 ];
 
 
