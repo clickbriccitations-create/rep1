@@ -108,7 +108,7 @@ export default function FooterCTA() {
 
             <h2 className="text-4xl font-black">
 
-              CloudAxis
+              Vertex Consult
 
             </h2>
 
@@ -142,7 +142,7 @@ export default function FooterCTA() {
 
                 <Mail size={18}/>
 
-                hello@cloudaxis.com
+                hello@vertexconsult.com
 
               </div>
 
@@ -258,7 +258,7 @@ export default function FooterCTA() {
 
           <p className="text-slate-500">
 
-            © 2026 CloudAxis Technologies. All Rights Reserved.
+            © 2026 VertexConsult UK Ltd. All Rights Reserved.
 
           </p>
 

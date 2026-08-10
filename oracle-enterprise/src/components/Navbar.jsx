@@ -131,7 +131,7 @@ text-slate-900
 >
 
 
-Cloud
+Vertex
 
 
 <span className="
@@ -139,7 +139,7 @@ text-blue-600
 
 ">
 
-Axis
+Consult UK Ltd.
 
 </span>
 
