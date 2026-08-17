@@ -199,7 +199,8 @@ top-20
 h-72
 w-72
 rounded-full
-bg-blue-400/20
+bg-blue-400
+opacity-20
 blur-[100px]
 "/>
 

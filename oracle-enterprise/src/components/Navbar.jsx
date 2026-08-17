@@ -71,7 +71,7 @@ py-3
 
 rounded-full
 
-bg-slate-950/75
+bg-white/10
 
 backdrop-blur-xl
 
