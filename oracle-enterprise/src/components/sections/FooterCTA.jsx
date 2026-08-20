@@ -1,293 +1,352 @@
+
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  
-  
+  Linkedin,
+  Twitter,
+  Github,
+  ArrowRight,
 } from "lucide-react";
 
 import Container from "../ui/Container";
 import PrimaryButton from "../ui/PrimaryButton";
-import EnterpriseArchitecture from "../ui/EnterpriseArchitecture";
 
 export default function FooterCTA() {
+  const solutions = [
+    "Oracle Cloud",
+    "Fusion ERP",
+    "Database",
+    "OCI",
+    "Analytics",
+  ];
+
+  const industries = [
+    "Banking",
+    "Healthcare",
+    "Retail",
+    "Manufacturing",
+    "Public Sector",
+  ];
+
+  const company = [
+    "About",
+    "Insights",
+    "Case Studies",
+    "Careers",
+    "Contact",
+  ];
+
+  const trustBadges = [
+    "Oracle Cloud Partner",
+    "OCI Certified",
+    "ISO 27001",
+    "24/7 Support",
+    "Enterprise Security",
+  ];
+
   return (
     <footer className="relative overflow-hidden bg-[#08111F] text-white">
+      {/* =========================================================
+          BACKGROUND EFFECTS
+      ========================================================== */}
 
-      {/* Background */}
+      {/* Top-left blue glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[-180px] top-[-180px] z-0 h-[500px] w-[500px] rounded-full blur-[140px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, rgba(37, 99, 235, 0) 70%)",
+        }}
+      />
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#2563eb20,transparent_40%)]"/>
+      {/* Bottom-right cyan glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-[-220px] right-[-180px] z-0 h-[550px] w-[550px] rounded-full blur-[150px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, rgba(6, 182, 212, 0) 70%)",
+        }}
+      />
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,#06b6d420,transparent_40%)]"/>
+      {/* Center subtle glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-[45%] z-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-[130px]"
+      />
 
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]" />
+      {/* Subtle grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "70px 70px",
+        }}
+      />
 
-      <Container>
+      {/* =========================================================
+          MAIN CONTENT
+      ========================================================== */}
 
-        {/* CTA */}
+      <div className="relative z-10">
+        <Container>
+          {/* =====================================================
+              CTA SECTION
+              No white card / no glass box
+          ====================================================== */}
 
-        <motion.div
+          <motion.section
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative overflow-hidden pt-20 sm:pt-24 lg:pt-28"
+          >
+            {/* CTA decorative glow */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute right-[-180px] top-[-100px] h-[420px] w-[420px] rounded-full bg-blue-600/10 blur-[130px]"
+            />
 
-          initial={{opacity:0,y:60}}
-          whileInView={{opacity:1,y:0}}
-          viewport={{once:true}}
+            <div className="relative border-b border-white/10 pb-20 sm:pb-24 lg:pb-28">
+              <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+                {/* LEFT CONTENT */}
+                <div className="min-w-0">
+                  {/* Eyebrow */}
+                  <span className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300 sm:px-5 sm:text-sm">
+                    Let&apos;s Build Something Great
+                  </span>
 
-          className="relative rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl p-16 mt-24 overflow-hidden"
+                  {/* Heading */}
+                  <h2 className="mt-7 max-w-4xl text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+                    Ready To Transform
+                    <span className="mt-2 block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                      Your Oracle Enterprise?
+                    </span>
+                  </h2>
 
-        >
+                  {/* Description */}
+                  <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+                    Modernize legacy systems, migrate to Oracle Cloud,
+                    automate business processes and unlock enterprise AI
+                    with a trusted implementation partner.
+                  </p>
 
-          <div className="absolute -right-40 top-0 w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[150px]" />
+                  {/* Buttons */}
+                  <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                    <PrimaryButton>
+                      <span className="flex items-center gap-2">
+                        Schedule Consultation
+                        <ArrowRight size={18} />
+                      </span>
+                    </PrimaryButton>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <button
+                      type="button"
+                      className="inline-flex min-h-[56px] items-center justify-center rounded-full border border-white/15 bg-transparent px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-cyan-400/40 hover:bg-white/5 hover:text-cyan-200 sm:px-8 sm:text-base"
+                    >
+                      Talk To An Expert
+                    </button>
+                  </div>
+                </div>
 
-            {/* LEFT */}
+                {/* RIGHT DECORATIVE DESIGN */}
+                <div className="relative hidden min-h-[280px] items-center justify-center lg:flex">
+                  {/* Outer ring */}
+                  <div className="absolute h-[280px] w-[280px] rounded-full border border-blue-400/10" />
 
-            <div>
+                  {/* Middle ring */}
+                  <div className="absolute h-[210px] w-[210px] rounded-full border border-cyan-400/10" />
 
-              <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-500/10 px-5 py-2 text-sm tracking-widest uppercase text-cyan-300">
+                  {/* Inner glow */}
+                  <div className="absolute h-[130px] w-[130px] rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-400/10 blur-2xl" />
 
-                Let's Build Something Great
+                  {/* Center */}
+                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-cyan-300/20 bg-[#0b1a2c] shadow-[0_0_60px_rgba(34,211,238,0.12)]">
+                    <div className="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_25px_rgba(103,232,249,0.9)]" />
+                  </div>
 
-              </span>
+                  {/* Decorative dots */}
+                  <div className="absolute right-8 top-10 h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.8)]" />
 
-              <h2 className="mt-8 text-6xl leading-tight font-black">
+                  <div className="absolute bottom-12 left-10 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_15px_rgba(103,232,249,0.8)]" />
 
-                Ready To Transform
+                  <div className="absolute bottom-5 right-20 h-1.5 w-1.5 rounded-full bg-blue-300/70" />
+                </div>
+              </div>
+            </div>
+          </motion.section>
 
-                <span className="block text-blue-400">
+          {/* =====================================================
+              FOOTER LINKS
+          ====================================================== */}
 
-                  Your Oracle Enterprise?
-
-                </span>
-
+          <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-5 lg:gap-10 lg:py-24">
+            {/* BRAND */}
+            <div className="min-w-0 lg:col-span-2">
+              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+                Vertex Consult
               </h2>
 
-              <p className="mt-8 text-slate-300 text-lg leading-9 max-w-xl">
-
-                Modernize legacy systems, migrate to Oracle Cloud,
-                automate business processes and unlock enterprise AI
-                with a trusted implementation partner.
-
+              <p className="mt-5 max-w-md text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
+                Delivering enterprise Oracle consulting, cloud migration,
+                AI transformation and managed services for organizations
+                worldwide.
               </p>
 
-              <div className="flex flex-wrap gap-5 mt-12">
+              {/* Contact details */}
+              <div className="mt-8 space-y-4 text-sm sm:text-base">
+                <div className="flex items-start gap-4 text-slate-300">
+                  <MapPin
+                    size={19}
+                    className="mt-1 shrink-0 text-cyan-400"
+                  />
 
-                <PrimaryButton>
+                  <span>Pune, Maharashtra, India</span>
+                </div>
 
-                  Schedule Consultation
+                <div className="flex items-center gap-4 text-slate-300">
+                  <Phone
+                    size={19}
+                    className="shrink-0 text-cyan-400"
+                  />
 
-                </PrimaryButton>
+                  <span>+91 98765 43210</span>
+                </div>
 
-                <button className="rounded-full border border-white/20 px-8 py-4 hover:bg-white hover:text-slate-900 transition">
+                <div className="flex items-center gap-4 text-slate-300">
+                  <Mail
+                    size={19}
+                    className="shrink-0 text-cyan-400"
+                  />
 
-                  Talk To An Expert
-
-                </button>
-
+                  <span className="break-all">
+                    hello@vertexconsult.com
+                  </span>
+                </div>
               </div>
-
             </div>
 
-            {/* RIGHT */}
+            {/* SOLUTIONS */}
+            <FooterColumn
+              title="Solutions"
+              items={solutions}
+            />
 
-            
+            {/* INDUSTRIES */}
+            <FooterColumn
+              title="Industries"
+              items={industries}
+            />
 
+            {/* COMPANY */}
+            <FooterColumn
+              title="Company"
+              items={company}
+            />
           </div>
 
-        </motion.div>
+          {/* =====================================================
+              TRUST BADGES
+          ====================================================== */}
 
-        {/* FOOTER */}
+          <div className="border-y border-white/10 py-8 sm:py-10">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
+              {trustBadges.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/[0.025] px-4 py-2.5 text-xs font-medium text-slate-300 transition-colors duration-300 hover:border-cyan-400/20 hover:text-cyan-200 sm:px-5 sm:py-3 sm:text-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 py-24">
+          {/* =====================================================
+              BOTTOM FOOTER
+          ====================================================== */}
 
-          {/* Brand */}
-
-          <div className="lg:col-span-2">
-
-            <h2 className="text-4xl font-black">
-
-              Vertex Consult
-
-            </h2>
-
-            <p className="mt-6 text-slate-400 leading-8 max-w-md">
-
-              Delivering enterprise Oracle consulting, cloud migration,
-              AI transformation and managed services for organizations
-              worldwide.
-
+          <div className="flex flex-col gap-7 py-8 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
+            <p className="text-center text-xs leading-6 text-slate-500 sm:text-sm lg:text-left">
+              © 2026 VertexConsult UK Ltd. All Rights Reserved.
             </p>
 
-            <div className="space-y-4 mt-10">
+            {/* Social icons */}
+            <div className="flex justify-center gap-3 lg:justify-end">
+              <SocialButton
+                label="LinkedIn"
+                hoverClass="hover:bg-blue-600 hover:border-blue-500"
+              >
+                <Linkedin size={18} />
+              </SocialButton>
 
-              <div className="flex items-center gap-4">
+              <SocialButton
+                label="Twitter"
+                hoverClass="hover:bg-sky-500 hover:border-sky-400"
+              >
+                <Twitter size={18} />
+              </SocialButton>
 
-                <MapPin size={18}/>
-
-                Pune, Maharashtra, India
-
-              </div>
-
-              <div className="flex items-center gap-4">
-
-                <Phone size={18}/>
-
-                +91 98765 43210
-
-              </div>
-
-              <div className="flex items-center gap-4">
-
-                <Mail size={18}/>
-
-                hello@vertexconsult.com
-
-              </div>
-
+              <SocialButton
+                label="GitHub"
+                hoverClass="hover:bg-slate-700 hover:border-slate-600"
+              >
+                <Github size={18} />
+              </SocialButton>
             </div>
-
           </div>
-
-          {/* Links */}
-
-          <div>
-
-            <h3 className="font-bold text-xl">
-
-              Solutions
-
-            </h3>
-
-            <ul className="space-y-5 mt-8 text-slate-400">
-
-              <li>Oracle Cloud</li>
-
-              <li>Fusion ERP</li>
-
-              <li>Database</li>
-
-              <li>OCI</li>
-
-              <li>Analytics</li>
-
-            </ul>
-
-          </div>
-
-          <div>
-
-            <h3 className="font-bold text-xl">
-
-              Industries
-
-            </h3>
-
-            <ul className="space-y-5 mt-8 text-slate-400">
-
-              <li>Banking</li>
-
-              <li>Healthcare</li>
-
-              <li>Retail</li>
-
-              <li>Manufacturing</li>
-
-              <li>Public Sector</li>
-
-            </ul>
-
-          </div>
-
-          <div>
-
-            <h3 className="font-bold text-xl">
-
-              Company
-
-            </h3>
-
-            <ul className="space-y-5 mt-8 text-slate-400">
-
-              <li>About</li>
-
-              <li>Insights</li>
-
-              <li>Case Studies</li>
-
-              <li>Careers</li>
-
-              <li>Contact</li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-        {/* Trust Badges */}
-
-        <div className="flex flex-wrap gap-5 border-y border-white/10 py-10">
-
-          {[
-            "Oracle Cloud Partner",
-            "OCI Certified",
-            "ISO 27001",
-            "24/7 Support",
-            "Enterprise Security",
-          ].map((item)=>(
-            <div
-
-              key={item}
-
-              className="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm text-slate-300"
-
-            >
-
-              {item}
-
-            </div>
-          ))}
-
-        </div>
-
-        {/* Bottom */}
-
-        <div className="flex flex-col lg:flex-row justify-between items-center py-10">
-
-          <p className="text-slate-500">
-
-            © 2026 VertexConsult UK Ltd. All Rights Reserved.
-
-          </p>
-
-          <div className="flex gap-5 mt-6 lg:mt-0">
-
-            <button className="w-12 h-12 rounded-full bg-white/5 hover:bg-blue-600 transition flex items-center justify-center">
-
-              
-
-            </button>
-
-            <button className="w-12 h-12 rounded-full bg-white/5 hover:bg-sky-500 transition flex items-center justify-center">
-
-              
-
-            </button>
-
-            <button className="w-12 h-12 rounded-full bg-white/5 hover:bg-slate-700 transition flex items-center justify-center">
-
-              
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </Container>
-
+        </Container>
+      </div>
     </footer>
   );
 }
+
+/* ===============================================================
+   FOOTER COLUMN
+================================================================ */
+
+function FooterColumn({ title, items }) {
+  return (
+    <div className="min-w-0">
+      <h3 className="text-lg font-bold text-white sm:text-xl">
+        {title}
+      </h3>
+
+      <ul className="mt-6 space-y-4">
+        {items.map((item) => (
+          <li key={item}>
+            <button
+              type="button"
+              className="text-left text-sm text-slate-400 transition-colors duration-300 hover:text-cyan-300 sm:text-base"
+            >
+              {item}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ===============================================================
+   SOCIAL BUTTON
+================================================================ */
+
+function SocialButton({ label, children, hoverClass }) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      className={`flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.035] text-slate-400 transition-all duration-300 hover:text-white ${hoverClass}`}
+    >
+      {children}
+    </button>
+  );
+}
+

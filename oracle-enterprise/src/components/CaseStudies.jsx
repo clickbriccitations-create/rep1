@@ -29,7 +29,8 @@ top-0
 h-[500px]
 w-[500px]
 rounded-full
-bg-blue-600/20
+bg-blue-600
+bg-opacity-20
 blur-[140px]
 "/>
 
@@ -41,7 +42,8 @@ bottom-0
 h-[500px]
 w-[500px]
 rounded-full
-bg-cyan-500/20
+bg-cyan-500
+bg-opacity-20
 blur-[140px]
 "/>
 
@@ -113,7 +115,7 @@ Driving Enterprise Growth
 
 <p className="
 mt-5
-text-slate-300
+text-white
 leading-7
 ">
 

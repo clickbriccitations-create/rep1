@@ -59,7 +59,8 @@ top-0
 h-72
 w-72
 rounded-full
-bg-blue-500/10
+bg-blue-500
+bg-opacity-10
 blur-3xl
 "/>
 

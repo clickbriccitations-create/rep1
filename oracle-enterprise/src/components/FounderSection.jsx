@@ -10,8 +10,8 @@ export default function FounderSection() {
     <section className="relative py-36 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 w-96 h-96 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500 bg-opacity-10 blur-[120px]" />
+      <div className="absolute right-0 bottom-0 w-96 h-96 rounded-full bg-cyan-500 bg-opacity-10 blur-[120px]" />
 
       <Container>
 

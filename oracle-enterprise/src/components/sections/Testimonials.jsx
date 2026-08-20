@@ -18,9 +18,9 @@ export default function Testimonials() {
 
       {/* Background Glow */}
 
-      <div className="absolute -top-32 left-0 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[150px]" />
+      <div className="absolute -top-32 left-0 w-[500px] h-[500px] rounded-full bg-blue-500 bg-opacity-10 blur-[150px]" />
 
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-cyan-500/10 blur-[160px]" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-cyan-500 bg-opacity-10 blur-[160px]" />
 
       <Container>
 
