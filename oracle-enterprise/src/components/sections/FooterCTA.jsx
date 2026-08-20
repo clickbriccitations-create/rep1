@@ -4,9 +4,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Linkedin,
-  Twitter,
-  Github,
   ArrowRight,
 } from "lucide-react";
 
@@ -277,29 +274,7 @@ export default function FooterCTA() {
               © 2026 VertexConsult UK Ltd. All Rights Reserved.
             </p>
 
-            {/* Social icons */}
-            <div className="flex justify-center gap-3 lg:justify-end">
-              <SocialButton
-                label="LinkedIn"
-                hoverClass="hover:bg-blue-600 hover:border-blue-500"
-              >
-                <Linkedin size={18} />
-              </SocialButton>
-
-              <SocialButton
-                label="Twitter"
-                hoverClass="hover:bg-sky-500 hover:border-sky-400"
-              >
-                <Twitter size={18} />
-              </SocialButton>
-
-              <SocialButton
-                label="GitHub"
-                hoverClass="hover:bg-slate-700 hover:border-slate-600"
-              >
-                <Github size={18} />
-              </SocialButton>
-            </div>
+            
           </div>
         </Container>
       </div>
